@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kantor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Marck+Script&family=Norican&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+</head>
+
+<body class="body">
+    <div class="container">
+        <p>
+        <form class="form js-form">
+            <fieldset class="form__fielset">
+                <legend class="form__legend">Przelicznik Walut</legend>
+                </p>
+                <label>
+                    <span class="form__labelText">Kwota w PLN*:</span>
+                    <input placeholder="Wpisz kwotę w zł" class="form__field js-currency" required type="number" step="0.01">
+                </label>
+                <p>
+                    <label>
+                        <span class="form__labelText">Waluta:</span>
+                        <select class="form__field js-exchange" required type="number" name="exchange">
+                            <option value="EUR">Euro</option>
+                            <option value="USD">Dolar Amerykański</option>
+                            <option value="GBP">Funt Brytyjski</option>
+                            <option value="JPY">Jen Japoński</option>
+                            <option value="CZK">Korona Czeska</option>
+                        </select>
+                    </label>
+                </p>
+            </fieldset>
+            <p>
+                <button class="form__button">Przelicz!</button>
+            </p>
+        </form>
+        <p class="js-result"> </p>
+    </div>
+
+</body>
