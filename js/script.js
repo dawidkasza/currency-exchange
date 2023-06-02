@@ -1,45 +1,56 @@
-let currencyElement = document.querySelector(".js-currency");
-let exchangeElement = document.querySelector(".js-exchange");
-let resultElement = document.querySelector(".js-result");
-let formElement = document.querySelector(".js-form");
+{
+    const calculateResult = (currency, exchange) => {
+        const rateEUR = 4.52;
+        const rateUSD = 4.22;
+        const rateGBP = 5.21;
+        const rateJPY = 0.030;
+        const rateCZK = 0.19;
+        
+        switch (exchange) 
+        {
+            case "EUR":
+                return currency / rateEUR;
 
-let rateEUR = 4.52;
-let rateUSD = 4.22;
-let rateGBP = 5.21;
-let rateJPY = 0.030;
-let rateCZK = 0.19;
+            case "USD":
+                return currency / rateUSD;
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
+            case "GBP":
+                return currency / rateGBP;
 
-    let currency = +currencyElement.value;
-    let exchange = exchangeElement.value;
-    let result;
+            case "JPY":
+                return currency / rateJPY;
+
+            case "CZK":
+                return currency / rateCZK;
+        }
+
+    };
+
+    const updateResultText = (currency, result, exchange) => {
+        const resultElement = document.querySelector(".js-result");
+        resultElement.innerHTML = `${currency.toFixed(2)} zł to <strong>${result.toFixed(2)} ${exchange}</strong>`;
+    };
+
+    const onFormSubmit = (event) =>{
+            event.preventDefault();
     
+            const currencyElement = document.querySelector(".js-currency");
+            const exchangeElement = document.querySelector(".js-exchange");
+            
+            const currency = +currencyElement.value;
+            const exchange = exchangeElement.value;
+            
+            const result = calculateResult(currency, exchange);
 
-    
-    switch (exchange) 
-    {
-        case "EUR":
-            result = currency / rateEUR;
-        break;
+            updateResultText(currency, result, exchange);
+        };
 
-        case "USD":
-            result = currency / rateUSD;
-        break;
+    const init = () =>{
+        const formElement = document.querySelector(".js-form");
 
-        case "GBP":
-            result = currency / rateGBP;
-        break;
+        formElement.addEventListener("submit", onFormSubmit);
+    };
 
-        case "JPY":
-            result = currency / rateJPY;
-        break;
+    init();
 
-        case "CZK":
-            result = currency / rateCZK;
-        break;
-    }
-
-    resultElement.innerHTML = `${currency.toFixed(2)} zł to <strong>${result.toFixed(2)} ${exchange}</strong>`;
-});
+}
