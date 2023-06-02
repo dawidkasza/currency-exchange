@@ -6,8 +6,6 @@
 }
 
 .form__field {
-    border: 1px solid #ccc;
-    border-radius: 5px;
     padding: 10px;
     max-width: 400px;
     width: 100%;
@@ -31,15 +29,12 @@
 
 }
 .form__fielset{
-    border: 1px solid black;
+    border: none;
     background-color: #ccc;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 25px 0;
+    padding: 10px;
 }
-.form__legend{
-    background-color: darkred;
-    color: white;
-    padding:15px;
-    border-radius: 15px;
+.form__header{
+    color: darkred;
+    text-align: center;
+    font-size: 2em;
 }
