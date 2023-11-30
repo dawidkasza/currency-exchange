@@ -5,7 +5,7 @@ This is a simple application that i developed during a programming course.
 https://zwierzak05.github.io/currency-exchange/
 
 ## View
-![image](https://github.com/Zwierzak05/currency-exchange/assets/98289771/f2ff0969-978a-46b7-9ec0-4a1719319cfc)
+![image]([https://github.com/Zwierzak05/currency-exchange/assets/98289771/f2ff0969-978a-46b7-9ec0-4a1719319cfc](https://dawidkasza.github.io/currency-exchange/))
 
 In this aplication you can chose one of 5 currency:
 - Euro
